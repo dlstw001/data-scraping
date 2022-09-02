@@ -1,0 +1,32 @@
+{
+  "name": "dev",
+  "version": "0.0.1",
+  "description": "This is an example of a Crawlee project.",
+  "type": "module",
+  "dependencies": {
+    "app-root-path": "^3.1.0",
+    "axios": "^0.27.2",
+    "crawlee": "^3.0.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "html-to-text": "^8.2.1",
+    "nodemon": "^2.0.19",
+    "parse-domain": "^7.0.1",
+    "puppeteer": "^17.0.0",
+    "puppeteer-autoscroll-down": "^1.1.1"
+  },
+  "scripts": {
+    "start": "rm -r storage || node ./build/main.js",
+    "dev": "nodemon --exec babel-node --presets=@babel/preset-env -- server/app.js",
+    "build": "babel ./src -d ./build",
+    "test": "babel-node --presets=@babel/preset-env -- src/main.js"
+  },
+  "author": "Peplink-MWS",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-cli": "^6.26.0"
+  }
+}
